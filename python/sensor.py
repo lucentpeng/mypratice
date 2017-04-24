@@ -6,12 +6,12 @@ import time;
 import socket;
 import sys;
 
-#=====Input Variable Start======#
-#If test mode is on, use hard code input
-#In the other side, use argv input
+"""=====Input Variable Start======
+If test mode is on, use hard code input
+In the other side, use argv input"""
 test_mode = 1
 t_ref = 0
-#=====Input Variable End======#
+"""=====Input Variable End======"""
 
 #Flag to show sensor collection status
 collect = 0
@@ -24,9 +24,11 @@ Apat = re.compile('[POCVTHZ][0-9.]+')
 hostname = socket.gethostname()
 print hostname
 print 'ipcs 3.0 sensor test!'
-fd = [	open('p.txt','w'), open('c.txt','w'), open('o.txt','w'),
-	open('v.txt','w'), open('t.txt','w'),
-	open('h.txt','w'), open('z.txt','w')			]
+
+filenames = [   str(hostname)+'.p.txt', str(hostname)+'.c.txt', str(hostname)+'.o.txt',
+		str(hostname)+'.v.txt', str(hostname)+'.t.txt',
+		str(hostname)+'.h.txt', str(hostname)+'.z.txt'			]
+fd = [ open(filename, 'w') for filename in filenames ]
 num = [ 'P', 'C', 'O', 'V', 'T', 'H', 'Z']
 
 def open_serial_port() : #Open ttyS1 UART port.
@@ -76,24 +78,20 @@ while os.path.isfile("run"):
 	for match in it:
 	    print "'{g}' was found, {s}".format(g=match.group(), s=match.span())
 	    g = match.group()
-
 	    sensor_type = g[0]
 	    print sensor_type
+
 	    value = filter(lambda form: form in '0123456789.', g)
-	    print("COLLECTION<==TYPE({0:s}),VALUE({1:.1f}),TIME({2:d})".format(sensor_type, float(value),int(t_sensor)))
-	    fd[ num.index(sensor_type) ].write( str(value) + ',' + str(int(t_sensor)) + '\n' )
-	    fd[ num.index(sensor_type) ].flush()
-#	    print "match is:"+ g
-#	    i = 0;
-#	    while ( len(list) > 0 ):
-#		value = filter(lambda form: form in '0123456789.', list[i])
-#		print "Apat:",list[i]
-#		list.pop()
-#		i += 1
+
+	    if( sensor_type != 'P' ) :
+		print("COLLECTION<==TYPE({0:s}),VALUE({1:.1f}),TIME({2:d})".format(sensor_type, float(value),int(t_sensor)))
+		fd[ num.index(sensor_type) ].write( str(value) + ',' + str(int(t_sensor)) + '\n' )
+		fd[ num.index(sensor_type) ].flush()
 		
 
 print 'Close sensor collection data.'
-fd[0].close()
-fd[1].close()
+for index in range(len(fd)):
+    fd[index].close()
+
 print 'Close ttyS1 UART port.'
 port.close()
