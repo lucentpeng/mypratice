@@ -18,18 +18,17 @@ collect = 0
 
 #Output Data Pattern
 Ppat = re.compile('^P[0-9]+\.[0-9]')
-Apat = re.compile('[POCVTHZ][0-9.]+')
+Apat = re.compile('[PCVTHD][0-9.]+')
 
 #Read ipcs host name, the host name should be serial number of board
 hostname = socket.gethostname()
 print hostname
 print 'ipcs 3.0 sensor test!'
 
-filenames = [   str(hostname)+'.p.txt', str(hostname)+'.c.txt', str(hostname)+'.o.txt',
-		str(hostname)+'.v.txt', str(hostname)+'.t.txt',
-		str(hostname)+'.h.txt', str(hostname)+'.z.txt'			]
+filenames = [   str(hostname)+'.p.csv', str(hostname)+'.t.csv', str(hostname)+'.h.csv',
+		str(hostname)+'.d.csv', str(hostname)+'.v.csv', str(hostname)+'.c.csv']
 fd = [ open(filename, 'w') for filename in filenames ]
-num = [ 'P', 'C', 'O', 'V', 'T', 'H', 'Z']
+num = [ 'P', 'T', 'H', 'D', 'V', 'C']
 
 def open_serial_port() : #Open ttyS1 UART port.
     port = serial.Serial(
@@ -51,10 +50,14 @@ print "start time is %d" %(t_start)
 port = open_serial_port()
 
 while os.path.isfile("run"):
-    raw = port.read(1)           # Wait forever for anything
-    data_left = port.inWaiting()  # Get the number of characters ready to be read
-    raw += port.read(data_left) # Do the read and combine it with the first character
-    print raw
+    try:
+	raw = port.read(1)           # Wait forever for anything
+	data_left = port.inWaiting()  # Get the number of characters ready to be read
+	raw += port.read(data_left) # Do the read and combine it with the first character
+	print raw
+    except :
+	print "Oops! Try again..."
+	port = open_serial_port()
 
     t_sensor = time.time() - t_start + t_ref
 #    print "elspase time is %d" %(t_sensor-t_start+t_ref)
@@ -67,7 +70,7 @@ while os.path.isfile("run"):
 	    print 'Start to collect sensor data.'
 	    collect = 1
 	    fd[0].write( str(value) + ',' + str(int(t_sensor)) + '\n')
-	    fd[0].flush
+	    fd[0].flush()
 	else:
 	    print 'Pressure value > critera'
 	    print 'Stop to collect sensor data'

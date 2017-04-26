@@ -67,11 +67,12 @@ def load_data_from_file( device, category ) :
 
 def write_data_to_file( sensor, delta ) :
 	for devname in device_list:
-	    idx = device_list.index( devname )
-	    print idx
+	    index = device_list.index( devname )
+	    print index
+	    print delta[index]
 	    filename = str(devname) + '.delta' 
 	    fd = open( filename, 'w')
-	    fd.write( str(sensor) + str(delta[idx]))
+	    fd.write( str(sensor) + ":" + str(delta[index]) + ",\n" )
 	    fd.close()
 	print 'write_data_to_file'
 
@@ -119,7 +120,9 @@ for item in args.category[0] :
     print item
     df = load_data_from_file( device_list, item.lower() )
     delta_table = sensor_compensation[item]( df )
-    write_data_to_file( item, delta_table )
+
+    if( delta_table is not None ):
+	write_data_to_file( item, delta_table )
 
 
 #
