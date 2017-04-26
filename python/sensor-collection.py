@@ -5,13 +5,15 @@ import os
 import time;
 import socket;
 import sys;
-from threading import Thread
+from threading import Thread, Lock
 
 """=====Input Variable Start======
 If test mode is on, use hard code input
 In the other side, use argv input"""
 t_ref = 0	    #There are many IPCS on the test chamber, PC need send reference time related to 1st test device.
 threadshold = 1100   #Data collection Critera , it is pressure value
+collect = 0	    #Flag to identify collection start ot stop
+mutex = Lock()	    #Mutex to control collect flag
 """=====Input Variable End======"""
 
 #Output Data Pattern
@@ -53,19 +55,32 @@ def open_serial_port() : #Open ttyS1 UART port.
     print port.name
     return port
 
+def collect_on( ct ) :
+    global collect
+    mutex.acquire();
+    try:
+	if ct is not None :
+	    collect = ct
+	return collect
+    finally:
+	mutex.release()
 
 
-def readLightSensor( fd ):
+def readLightSensor( fd ) :
     while True:
-	adc = os.popen('cat /sys/bus/iio/devices/iio:device0/in_voltage0_raw').read()
-	lux = abs(int(adc)) * 101 >> 8
-	t_sensor = time.time() - t_start + t_ref
-	write_to_file( fd, 'L', lux, t_sensor)
-	time.sleep(5) #update lux per 5 seconds
+	try:
+	    adc = os.popen('cat /sys/bus/iio/devices/iio:device0/in_voltage0_raw').read()
+	except :
+	    print "Oops! Try again..."
+	    break
+	if collect_on(None) == 1 :
+	    lux = abs(int(adc)) * 101 >> 8
+	    t_sensor = time.time() - t_start + t_ref
+	    write_to_file( fd, 'L', lux, t_sensor)
+	    time.sleep(5) #update lux per 5 seconds
 
 
 def do_collection( port, fd ) :
-    collect = 0	    #Flag to identify collection start ot stop
     while os.path.isfile("run"):
 	try:
 	    raw = port.read(1)           # Wait forever for anything
@@ -84,13 +99,13 @@ def do_collection( port, fd ) :
 	    #	print value
 	    if (float(value) < threadshold):
 		print 'Start to collect sensor data.'
-		collect = 1
+		collect_on(1)
 		write_to_file( fd, 'P', value, t_sensor)
 	    else:
 		print 'Stop to collect sensor data'
-		collect = 0
+		collect_on(0)
 
-	if (collect == 1):
+	if (collect_on(None) == 1):
 	    it = re.finditer(Apat, raw)
 	    for match in it:
 		print "'{g}' was found, {s}".format(g=match.group(), s=match.span())
