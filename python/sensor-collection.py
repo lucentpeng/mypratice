@@ -5,13 +5,34 @@ import os
 import time;
 import socket;
 import sys;
+import argparse as ar
 from threading import Thread, Lock
+
+'''
+INPUT
+1. serial number table, to define how many devices
+2. which sensor need to calculate
+
+OUTPUT
+1. Sensor include Pressure, Temperature, Humidility, TVOC, CO2 , Dust
+2. Sensor compensation value, each sensor for each device has different value. 
+3. Graph to show sensor curve.
+'''
+#version number
+parser = ar.ArgumentParser(description='IPCS sensor collection tools, version=0.1')
+parser.add_argument('-t', dest='time_delay', action='store', nargs=1, required=True,
+                    help='Set delay time from PC')
+parser.add_argument('-c', dest='critera', action='store', nargs=1,
+                    help='Set data collection critera')
+
+args = parser.parse_args()
 
 """=====Input Variable Start======
 If test mode is on, use hard code input
 In the other side, use argv input"""
-t_ref = 0	    #There are many IPCS on the test chamber, PC need send reference time related to 1st test device.
-threadshold = 1100   #Data collection Critera , it is pressure value
+#There are many IPCS on the test chamber, PC need send reference time related to 1st test device.
+t_ref = int(args.time_delay[0])
+threadshold = args.critera[0]   #Data collection Critera , it is pressure value
 collect = 0	    #Flag to identify collection start ot stop
 mutex = Lock()	    #Mutex to control collect flag
 """=====Input Variable End======"""
@@ -28,7 +49,7 @@ def open_file() :
     #Read ipcs host name, the host name should be serial number of board
     hostname = str(socket.gethostname())
     for n in num :
-	filename = hostname + '.' + n.lower() + '.csv'
+	filename = hostname + '.' + n + '.csv'
 	fd.append(open(filename, 'w'))
     return fd
 
