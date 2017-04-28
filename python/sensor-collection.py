@@ -32,7 +32,7 @@ If test mode is on, use hard code input
 In the other side, use argv input"""
 #There are many IPCS on the test chamber, PC need send reference time related to 1st test device.
 t_ref = int(args.time_delay[0])
-threadshold = args.critera[0]   #Data collection Critera , it is pressure value
+threadshold = float(args.critera[0])   #Data collection Critera , it is pressure value
 collect = 0	    #Flag to identify collection start ot stop
 mutex = Lock()	    #Mutex to control collect flag
 """=====Input Variable End======"""
@@ -78,6 +78,8 @@ def open_serial_port() : #Open ttyS1 UART port.
 
 def collect_on( ct ) :
     global collect
+    global mutex
+
     mutex.acquire();
     try:
 	if ct is not None :
@@ -88,6 +90,7 @@ def collect_on( ct ) :
 
 
 def readLightSensor( fd ) :
+    global t_ref
     while True:
 	try:
 	    adc = os.popen('cat /sys/bus/iio/devices/iio:device0/in_voltage0_raw').read()
@@ -100,8 +103,18 @@ def readLightSensor( fd ) :
 	    write_to_file( fd, 'L', lux, t_sensor)
 	    time.sleep(5) #update lux per 5 seconds
 
+def trigger_decision( stype, value) :
+	if( stype == 'P' ) :
+	    if (float(value) < threadshold):
+		print 'Activate collection. Reason:' + str(stype) + ' Sensor'
+		collect_on(1)
+	    else:
+		print 'Deactive collection. Reason:' + str(stype) + ' Sensor'
+		collect_on(0)
+
 
 def do_collection( port, fd ) :
+    global t_ref
     while os.path.isfile("run"):
 	try:
 	    raw = port.read(1)           # Wait forever for anything
@@ -115,29 +128,17 @@ def do_collection( port, fd ) :
 	t_sensor = time.time() - t_start + t_ref
 	#    print "elspase time is %d" %(t_sensor-t_start+t_ref)
 
-	if Ppat.search(raw):
-	    value = filter(lambda form: form in '0123456789.', Ppat.findall(raw)[0])
-	    #	print value
-	    if (float(value) < threadshold):
-		print 'Start to collect sensor data.'
-		collect_on(1)
-		write_to_file( fd, 'P', value, t_sensor)
-	    else:
-		print 'Stop to collect sensor data'
-		collect_on(0)
+	it = re.finditer(Apat, raw)
+	for match in it:
+	    print "'{g}' was found, {s}".format(g=match.group(), s=match.span())
+	    g = match.group()
+	    sensor_type = g[0]
 
-	if (collect_on(None) == 1):
-	    it = re.finditer(Apat, raw)
-	    for match in it:
-		print "'{g}' was found, {s}".format(g=match.group(), s=match.span())
-		g = match.group()
-		sensor_type = g[0]
-		print sensor_type
+	    value = filter(lambda form: form in '0123456789.', g)
+	    trigger_decision( sensor_type, value)
 
-		value = filter(lambda form: form in '0123456789.', g)
-
-		if( sensor_type != 'P' ) :
-		    write_to_file( fd, sensor_type, value, t_sensor)
+	    if (collect_on(None) == 1):
+		write_to_file( fd, sensor_type, value, t_sensor)
 
 ###################################
 print 'ipcs 3.0 sensor test start!'

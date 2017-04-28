@@ -118,7 +118,7 @@ device_list = read_sn_from_file()
 
 for item in args.category[0] :
     print item
-    df = load_data_from_file( device_list, item.lower() )
+    df = load_data_from_file( device_list, item )
     delta_table = sensor_compensation[item]( df )
 
     if( delta_table is not None ):
