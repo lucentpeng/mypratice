@@ -1,0 +1,2847 @@
+1646I3000071
+ipcs 3.0 sensor test!
+start time is 1493003412
+/dev/ttyS1
+D6.7	
+
+
+
+T24.3	
+H61.1	
+
+
+
+P1017.9	
+C1076	
+O1023	
+V283	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1076' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1076.0),TIME(5)
+'O1023' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1023.0),TIME(5)
+'V283' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(283.0),TIME(5)
+
+
+
+T24.2	
+H61.1	
+
+'T24.2' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.2),TIME(8)
+'H61.1' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.1),TIME(8)
+
+
+P1017.9	
+C1071	
+O1017	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1071' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1071.0),TIME(11)
+'O1017' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1017.0),TIME(11)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(11)
+T24.3	
+H61.1	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(11)
+'H61.1' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.1),TIME(11)
+
+D5.1	
+
+
+T24.3	
+H61.0	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(14)
+'H61.0' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.0),TIME(14)
+
+
+P1017.9	
+C1063	
+O1017	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1063' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1063.0),TIME(17)
+'O1017' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1017.0),TIME(17)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(17)
+T24.3	
+H61.0	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(17)
+'H61.0' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.0),TIME(17)
+
+
+
+
+
+P1017.9	
+C1056	
+O1019	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1056' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1056.0),TIME(23)
+'O1019' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1019.0),TIME(23)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(23)
+T24.3	
+H60.9	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(24)
+'H60.9' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.9),TIME(24)
+
+
+D7.2	
+
+T24.3	
+H60.9	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(27)
+'H60.9' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.9),TIME(27)
+
+
+P1017.9	
+C1050	
+O1017	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1050' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1050.0),TIME(29)
+'O1017' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1017.0),TIME(29)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(29)
+T24.3	
+H60.9	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(30)
+'H60.9' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.9),TIME(30)
+
+
+
+T24.5	
+H60.7	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(33)
+'H60.7' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.7),TIME(33)
+
+
+P1017.9	
+C1038	
+O1017	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1038' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1038.0),TIME(35)
+'O1017' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1017.0),TIME(35)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(35)
+T24.5	
+H60.6	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(36)
+'H60.6' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.6),TIME(36)
+
+
+
+
+
+P1017.9	
+C1032	
+O1019	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1032' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1032.0),TIME(41)
+'O1019' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1019.0),TIME(41)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(41)
+T24.8	
+H60.0	
+
+'T24.8' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.8),TIME(42)
+'H60.0' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.0),TIME(42)
+
+
+
+
+
+P1017.9	
+C1027	
+O1019	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1027' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1027.0),TIME(47)
+'O1019' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1019.0),TIME(47)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(47)
+T25.1	
+H59.2	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(48)
+'H59.2' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.2),TIME(48)
+
+
+
+
+
+P1017.9	
+C1025	
+O1017	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1025' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1025.0),TIME(53)
+'O1017' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1017.0),TIME(53)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(53)
+T25.1	
+H58.7	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(54)
+'H58.7' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.7),TIME(54)
+
+
+
+
+
+P1017.9	
+C1022	
+O1019	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1022' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1022.0),TIME(59)
+'O1019' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1019.0),TIME(59)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(59)
+T25.1	
+H58.6	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(60)
+'H58.6' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.6),TIME(60)
+
+
+
+
+D5.5	
+
+
+P1017.9	
+C1019	
+O1021	
+V283	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1019' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1019.0),TIME(65)
+'O1021' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1021.0),TIME(65)
+'V283' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(283.0),TIME(65)
+T25.1	
+H58.5	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(66)
+'H58.5' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.5),TIME(66)
+
+
+
+
+
+P1017.9	
+C1019	
+O1019	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1019' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1019.0),TIME(71)
+'O1019' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1019.0),TIME(71)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(71)
+T25.1	
+H58.4	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(72)
+'H58.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.4),TIME(72)
+
+
+
+
+
+D5.9	
+
+P1017.9	
+C1021	
+O1021	
+V283	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1021' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1021.0),TIME(77)
+'O1021' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1021.0),TIME(77)
+'V283' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(283.0),TIME(77)
+T25.1	
+H58.5	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(78)
+'H58.5' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.5),TIME(78)
+
+
+
+T25.0	
+H58.5	
+
+'T25.0' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.0),TIME(81)
+'H58.5' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.5),TIME(81)
+
+
+P1017.9	
+C1023	
+O1023	
+V283	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1023' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1023.0),TIME(83)
+'O1023' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1023.0),TIME(83)
+'V283' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(283.0),TIME(83)
+T24.9	
+H58.7	
+
+'T24.9' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.9),TIME(84)
+'H58.7' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.7),TIME(84)
+
+
+
+
+
+P1017.9	
+C1027	
+O1021	
+V283	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1027' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1027.0),TIME(89)
+'O1021' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1021.0),TIME(89)
+'V283' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(283.0),TIME(89)
+T24.9	
+H59.0	
+
+'T24.9' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.9),TIME(90)
+'H59.0' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.0),TIME(90)
+D11.1	
+
+
+
+T24.9	
+H59.1	
+
+'T24.9' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.9),TIME(93)
+'H59.1' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.1),TIME(93)
+
+
+P1017.9	
+C1036	
+O1019	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1036' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1036.0),TIME(95)
+'O1019' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1019.0),TIME(95)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(95)
+T24.9	
+H59.1	
+
+'T24.9' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.9),TIME(96)
+'H59.1' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.1),TIME(96)
+
+
+
+
+
+P1017.9	
+C1042	
+O1019	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1042' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1042.0),TIME(101)
+'O1019' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1019.0),TIME(101)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(101)
+T24.7	
+H59.4	
+
+'T24.7' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.7),TIME(102)
+'H59.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.4),TIME(102)
+D3.6	
+
+
+
+
+
+P1017.9	
+C1046	
+O1023	
+V283	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1046' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1046.0),TIME(107)
+'O1023' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1023.0),TIME(107)
+'V283' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(283.0),TIME(107)
+T24.6	
+H59.8	
+
+'T24.6' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.6),TIME(108)
+'H59.8' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.8),TIME(108)
+
+
+
+
+
+P1017.9	
+C1050	
+O1021	
+V283	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1050' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1050.0),TIME(113)
+'O1021' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1021.0),TIME(113)
+'V283' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(283.0),TIME(113)
+T24.5	
+H60.2	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(114)
+'H60.2' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.2),TIME(114)
+
+D5.0	
+
+
+T24.4	
+H60.3	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(117)
+'H60.3' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.3),TIME(117)
+
+
+P1017.9	
+C1054	
+O1023	
+V283	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1054' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1054.0),TIME(119)
+'O1023' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1023.0),TIME(119)
+'V283' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(283.0),TIME(119)
+T24.4	
+H60.3	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(120)
+'H60.3' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.3),TIME(120)
+
+
+
+
+
+P1017.9	
+C1062	
+O1019	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1062' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1062.0),TIME(126)
+'O1019' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1019.0),TIME(126)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(126)
+T24.4	
+H60.4	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(126)
+'H60.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.4),TIME(126)
+
+
+D5.7	
+
+T24.4	
+H60.4	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(129)
+'H60.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.4),TIME(129)
+
+
+P1017.9	
+C1066	
+O1017	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1066' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1066.0),TIME(132)
+'O1017' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1017.0),TIME(132)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(132)
+T24.6	
+H60.4	
+
+'T24.6' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.6),TIME(132)
+'H60.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.4),TIME(132)
+
+
+
+
+
+P1017.9	
+C1070	
+O1017	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1070' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1070.0),TIME(138)
+'O1017' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1017.0),TIME(138)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(138)
+T24.5	
+H60.2	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(138)
+'H60.2' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.2),TIME(138)
+
+
+
+T24.5	
+H60.3	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(141)
+'H60.3' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.3),TIME(141)
+D5.1	
+
+
+
+P1017.9	
+C1075	
+O1017	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1075' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1075.0),TIME(144)
+'O1017' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1017.0),TIME(144)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(144)
+T24.5	
+H60.3	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(144)
+'H60.3' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.3),TIME(144)
+
+
+
+
+
+P1017.9	
+C1078	
+O1019	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1078' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1078.0),TIME(150)
+'O1019' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1019.0),TIME(150)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(150)
+
+
+
+T24.5	
+H60.4	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(153)
+'H60.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.4),TIME(153)
+
+D11.7	
+
+
+P1017.9	
+C1081	
+O1019	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1081' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1081.0),TIME(156)
+'O1019' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1019.0),TIME(156)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(156)
+T24.5	
+H60.3	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(156)
+'H60.3' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.3),TIME(156)
+
+
+
+T24.4	
+H60.3	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(159)
+'H60.3' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.3),TIME(159)
+
+
+P1017.9	
+C1082	
+O1017	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1082' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1082.0),TIME(162)
+'O1017' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1017.0),TIME(162)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(162)
+T24.5	
+H60.4	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(162)
+'H60.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.4),TIME(162)
+Z01.01	
+
+'Z01.01' was found, (0, 6)
+Z
+COLLECTION<==TYPE(Z),VALUE(1.0),TIME(162)
+
+
+T24.5	
+H60.3	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(165)
+'H60.3' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.3),TIME(165)
+
+D5.4	
+
+P1017.9	
+C1081	
+O1017	
+V282	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1081' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1081.0),TIME(168)
+'O1017' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1017.0),TIME(168)
+'V282' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(282.0),TIME(168)
+T24.4	
+H60.4	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(168)
+'H60.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.4),TIME(168)
+
+
+
+
+
+P1017.9	
+C1081	
+O1015	
+V281	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1081' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1081.0),TIME(174)
+'O1015' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1015.0),TIME(174)
+'V281' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(281.0),TIME(174)
+T24.4	
+H61.2	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(174)
+'H61.2' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.2),TIME(174)
+
+
+
+T24.4	
+H61.4	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(177)
+'H61.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.4),TIME(177)
+
+
+P1017.9	
+C1080	
+O1014	
+V281	
+D7.6	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1080' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1080.0),TIME(180)
+'O1014' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1014.0),TIME(180)
+'V281' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(281.0),TIME(180)
+T24.5	
+H61.3	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(180)
+'H61.3' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.3),TIME(180)
+
+
+
+T24.5	
+H61.3	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(183)
+'H61.3' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.3),TIME(183)
+
+
+P1017.9	
+C1078	
+O1014	
+V281	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1078' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1078.0),TIME(186)
+'O1014' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1014.0),TIME(186)
+'V281' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(281.0),TIME(186)
+T24.5	
+H61.1	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(186)
+'H61.1' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.1),TIME(186)
+
+
+
+
+
+P1017.9	
+C1078	
+O1014	
+V281	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1078' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1078.0),TIME(192)
+'O1014' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1014.0),TIME(192)
+'V281' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(281.0),TIME(192)
+T24.4	
+H60.8	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(192)
+'H60.8' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.8),TIME(192)
+D6.1	
+
+
+
+T24.4	
+H60.8	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(195)
+'H60.8' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.8),TIME(195)
+
+
+P1017.9	
+C1078	
+O1014	
+V281	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1078' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1078.0),TIME(198)
+'O1014' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1014.0),TIME(198)
+'V281' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(281.0),TIME(198)
+T24.4	
+H60.8	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(198)
+'H60.8' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.8),TIME(198)
+
+
+
+
+
+P1017.9	
+C1079	
+O1014	
+V281	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1079' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1079.0),TIME(204)
+'O1014' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1014.0),TIME(204)
+'V281' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(281.0),TIME(204)
+T24.4	
+H60.8	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(204)
+'H60.8' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.8),TIME(204)
+
+D9.3	
+
+
+T24.4	
+H60.6	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(207)
+'H60.6' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.6),TIME(207)
+
+
+P1017.9	
+C1081	
+O1012	
+V280	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1081' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1081.0),TIME(210)
+'O1012' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1012.0),TIME(210)
+'V280' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(280.0),TIME(210)
+T24.4	
+H60.6	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(210)
+'H60.6' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.6),TIME(210)
+
+
+
+T24.4	
+H60.6	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(213)
+'H60.6' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.6),TIME(213)
+
+
+P1017.9	
+C1083	
+O1010	
+V280	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1083' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1083.0),TIME(216)
+'O1010' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1010.0),TIME(216)
+'V280' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(280.0),TIME(216)
+T24.6	
+H60.5	
+
+'T24.6' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.6),TIME(216)
+'H60.5' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.5),TIME(216)
+
+
+D8.5	
+
+T24.6	
+H60.2	
+
+'T24.6' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.6),TIME(219)
+'H60.2' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.2),TIME(219)
+
+
+P1017.9	
+C1085	
+O1012	
+V280	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1085' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1085.0),TIME(222)
+'O1012' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1012.0),TIME(222)
+'V280' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(280.0),TIME(222)
+
+
+
+T24.4	
+H60.3	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(225)
+'H60.3' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.3),TIME(225)
+
+
+P1017.9	
+C1087	
+O1012	
+V280	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1087' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1087.0),TIME(228)
+'O1012' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1012.0),TIME(228)
+'V280' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(280.0),TIME(228)
+T24.3	
+H60.4	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(228)
+'H60.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.4),TIME(228)
+
+
+
+T24.3	
+H60.5	
+D3.7	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(231)
+'H60.5' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.5),TIME(231)
+
+
+P1017.9	
+C1089	
+O1012	
+V280	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1089' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1089.0),TIME(234)
+'O1012' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1012.0),TIME(234)
+'V280' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(280.0),TIME(234)
+T24.3	
+H60.6	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(234)
+'H60.6' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.6),TIME(234)
+
+
+
+
+
+P1017.9	
+C1091	
+O1012	
+V280	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1091' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1091.0),TIME(240)
+'O1012' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1012.0),TIME(240)
+'V280' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(280.0),TIME(240)
+T24.3	
+H60.8	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(240)
+'H60.8' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.8),TIME(240)
+
+
+
+T24.3	
+H60.9	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(243)
+'H60.9' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.9),TIME(243)
+D8.0	
+
+
+
+P1017.9	
+C1097	
+O1008	
+V279	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1097' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1097.0),TIME(246)
+'O1008' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1008.0),TIME(246)
+'V279' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(279.0),TIME(246)
+T24.4	
+H60.8	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(246)
+'H60.8' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.8),TIME(246)
+
+
+
+
+
+P1017.9	
+C1100	
+O1008	
+V279	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1100' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1100.0),TIME(252)
+'O1008' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1008.0),TIME(252)
+'V279' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(279.0),TIME(252)
+T24.5	
+H60.4	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(252)
+'H60.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.4),TIME(252)
+
+
+
+T24.4	
+H60.4	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(255)
+'H60.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.4),TIME(255)
+
+D6.6	
+
+
+P1017.9	
+C1103	
+O1004	
+V278	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1103' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1103.0),TIME(258)
+'O1004' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1004.0),TIME(258)
+'V278' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(278.0),TIME(258)
+T24.5	
+H60.4	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(258)
+'H60.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.4),TIME(258)
+
+
+
+
+
+P1017.9	
+C1106	
+O1004	
+V278	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1106' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1106.0),TIME(264)
+'O1004' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1004.0),TIME(264)
+'V278' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(278.0),TIME(264)
+
+
+
+T24.7	
+H59.9	
+
+'T24.7' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.7),TIME(267)
+'H59.9' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.9),TIME(267)
+
+
+D7.2	
+
+P1017.9	
+C1109	
+O1002	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1109' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1109.0),TIME(270)
+'O1002' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1002.0),TIME(270)
+'V277' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(270)
+T24.6	
+H59.9	
+
+'T24.6' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.6),TIME(270)
+'H59.9' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.9),TIME(270)
+
+
+
+
+
+P1017.9	
+C1116	
+O1002	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1116' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1116.0),TIME(276)
+'O1002' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1002.0),TIME(276)
+'V277' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(276)
+T24.5	
+H60.1	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(276)
+'H60.1' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.1),TIME(276)
+
+
+
+
+
+P1017.9	
+C1117	
+O1004	
+V278	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1117' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1117.0),TIME(282)
+'O1004' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1004.0),TIME(282)
+'V278' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(278.0),TIME(282)
+T24.5	
+H60.2	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(282)
+'H60.2' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.2),TIME(282)
+D4.9	
+
+
+
+T24.5	
+H60.2	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(285)
+'H60.2' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.2),TIME(285)
+
+
+P1017.9	
+C1116	
+O1002	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1116' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1116.0),TIME(288)
+'O1002' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1002.0),TIME(288)
+'V277' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(288)
+T24.4	
+H60.1	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(288)
+'H60.1' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.1),TIME(288)
+
+
+
+
+
+P1017.9	
+C1115	
+O1000	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1115' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1115.0),TIME(294)
+'O1000' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1000.0),TIME(294)
+'V277' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(294)
+T24.4	
+H60.4	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(294)
+'H60.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.4),TIME(294)
+D5.8	
+
+
+
+T24.4	
+H60.4	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(297)
+'H60.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.4),TIME(297)
+
+
+P1017.9	
+C1113	
+O1000	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1113' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1113.0),TIME(300)
+'O1000' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1000.0),TIME(300)
+'V277' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(300)
+T24.5	
+H60.4	
+
+'T24.5' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.5),TIME(300)
+'H60.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.4),TIME(300)
+
+
+
+
+
+P1017.9	
+C1105	
+O1002	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1105' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1105.0),TIME(306)
+'O1002' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1002.0),TIME(306)
+'V277' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(306)
+T24.8	
+H59.9	
+
+'T24.8' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.8),TIME(306)
+'H59.9' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.9),TIME(306)
+
+D5.2	
+
+
+T24.8	
+H59.7	
+
+'T24.8' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.8),TIME(309)
+'H59.7' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.7),TIME(309)
+
+
+P1017.9	
+C1103	
+O1001	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1103' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1103.0),TIME(312)
+'O1001' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1001.0),TIME(312)
+'V277' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(312)
+T25.0	
+H59.6	
+
+'T25.0' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.0),TIME(312)
+'H59.6' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.6),TIME(312)
+
+
+
+
+
+P1017.9	
+C1101	
+O1001	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1101' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1101.0),TIME(318)
+'O1001' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1001.0),TIME(318)
+'V277' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(318)
+T25.1	
+H58.9	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(318)
+'H58.9' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.9),TIME(318)
+
+
+D7.0	
+
+T25.1	
+H58.7	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(321)
+'H58.7' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.7),TIME(321)
+
+
+P1017.9	
+C1098	
+O999	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1098' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1098.0),TIME(324)
+'O999' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(999.0),TIME(324)
+'V277' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(324)
+T25.1	
+H58.6	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(324)
+'H58.6' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.6),TIME(324)
+
+
+
+
+
+P1017.9	
+C1095	
+O1001	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1095' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1095.0),TIME(330)
+'O1001' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1001.0),TIME(330)
+'V277' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(330)
+
+
+
+T25.0	
+H58.9	
+
+'T25.0' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.0),TIME(333)
+'H58.9' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.9),TIME(333)
+D3.4	
+
+
+
+P1017.9	
+C1092	
+O1001	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1092' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1092.0),TIME(336)
+'O1001' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1001.0),TIME(336)
+'V277' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(336)
+T24.9	
+H59.0	
+
+'T24.9' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.9),TIME(336)
+'H59.0' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.0),TIME(336)
+
+
+
+
+
+P1017.9	
+C1090	
+O999	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1090' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1090.0),TIME(342)
+'O999' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(999.0),TIME(342)
+'V277' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(342)
+T24.9	
+H59.2	
+
+'T24.9' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.9),TIME(342)
+'H59.2' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.2),TIME(342)
+
+
+T24.9	
+H59.2	
+
+'T24.9' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.9),TIME(345)
+'H59.2' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.2),TIME(345)
+
+D17.5	
+
+
+P1017.9	
+C1088	
+O997	
+V276	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1088' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1088.0),TIME(348)
+'O997' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(997.0),TIME(348)
+'V276' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(276.0),TIME(348)
+T25.0	
+H59.2	
+
+'T25.0' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.0),TIME(348)
+'H59.2' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.2),TIME(348)
+
+
+
+T25.0	
+H59.1	
+
+'T25.0' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.0),TIME(351)
+'H59.1' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.1),TIME(351)
+
+
+P1017.9	
+C1087	
+O997	
+V276	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1087' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1087.0),TIME(354)
+'O997' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(997.0),TIME(354)
+'V276' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(276.0),TIME(354)
+T25.1	
+H59.0	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(354)
+'H59.0' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.0),TIME(354)
+
+
+
+T25.0	
+H59.0	
+
+'T25.0' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.0),TIME(357)
+'H59.0' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.0),TIME(357)
+
+D9.0	
+
+P1017.9	
+C1085	
+O995	
+V276	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1085' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1085.0),TIME(360)
+'O995' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(995.0),TIME(360)
+'V276' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(276.0),TIME(360)
+T25.0	
+H59.0	
+
+'T25.0' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.0),TIME(360)
+'H59.0' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.0),TIME(360)
+
+
+
+
+
+P1017.9	
+C1084	
+O997	
+V276	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1084' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1084.0),TIME(366)
+'O997' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(997.0),TIME(366)
+'V276' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(276.0),TIME(366)
+
+Z01.01	
+
+'Z01.01' was found, (0, 6)
+Z
+COLLECTION<==TYPE(Z),VALUE(1.0),TIME(368)
+
+T25.1	
+H58.9	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(369)
+'H58.9' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.9),TIME(369)
+
+
+P1017.9	
+C1088	
+O999	
+V277	
+D6.4	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1088' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1088.0),TIME(372)
+'O999' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(999.0),TIME(372)
+'V277' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(372)
+T25.1	
+H58.7	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(372)
+'H58.7' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.7),TIME(372)
+
+
+
+T25.1	
+H58.7	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(375)
+'H58.7' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.7),TIME(375)
+
+
+P1017.9	
+C1092	
+O1001	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1092' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1092.0),TIME(378)
+'O1001' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1001.0),TIME(378)
+'V277' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(378)
+T25.1	
+H58.5	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(378)
+'H58.5' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.5),TIME(378)
+
+
+
+T25.1	
+H58.5	
+
+'T25.1' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(25.1),TIME(381)
+'H58.5' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.5),TIME(381)
+
+
+P1017.9	
+C1096	
+O1003	
+V278	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1096' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1096.0),TIME(384)
+'O1003' was found, (18, 23)
+O
+COLLECTION<==TYPE(O),VALUE(1003.0),TIME(384)
+'V278' was found, (26, 30)
+V
+COLLECTION<==TYPE(V),VALUE(278.0),TIME(384)
+
+
+
+T24.9	
+H58.8	
+
+'T24.9' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.9),TIME(387)
+'H58.8' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(58.8),TIME(387)
+
+
+P1017.9	
+C1101	
+O999	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1101' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1101.0),TIME(390)
+'O999' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(999.0),TIME(390)
+'V277' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(390)
+T24.8	
+H59.1	
+
+'T24.8' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.8),TIME(390)
+'H59.1' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.1),TIME(390)
+
+
+
+
+
+P1017.9	
+C1104	
+O997	
+V276	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1104' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1104.0),TIME(396)
+'O997' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(997.0),TIME(396)
+'V276' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(276.0),TIME(396)
+T24.7	
+H59.4	
+
+'T24.7' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.7),TIME(396)
+'H59.4' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.4),TIME(396)
+
+D5.2	
+
+
+T24.7	
+H59.6	
+
+'T24.7' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.7),TIME(399)
+'H59.6' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.6),TIME(399)
+
+
+P1017.9	
+C1109	
+O999	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1109' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1109.0),TIME(402)
+'O999' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(999.0),TIME(402)
+'V277' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(402)
+T24.7	
+H59.7	
+
+'T24.7' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.7),TIME(402)
+'H59.7' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.7),TIME(402)
+
+
+
+
+
+P1018.0	
+C1112	
+O999	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1018.0' was found, (0, 7)
+P
+'C1112' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1112.0),TIME(408)
+'O999' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(999.0),TIME(408)
+'V277' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(408)
+T24.7	
+H59.7	
+
+'T24.7' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.7),TIME(408)
+'H59.7' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.7),TIME(408)
+
+
+D30.8	
+
+T24.7	
+H59.7	
+
+'T24.7' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.7),TIME(411)
+'H59.7' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.7),TIME(411)
+
+
+P1017.9	
+C1113	
+O999	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1113' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1113.0),TIME(414)
+'O999' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(999.0),TIME(414)
+'V277' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(414)
+T24.6	
+H59.8	
+
+'T24.6' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.6),TIME(414)
+'H59.8' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(59.8),TIME(414)
+
+
+
+
+
+P1018.0	
+C1115	
+O999	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1018.0' was found, (0, 7)
+P
+'C1115' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1115.0),TIME(420)
+'O999' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(999.0),TIME(420)
+'V277' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(420)
+T24.4	
+H60.1	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(420)
+'H60.1' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.1),TIME(420)
+
+
+
+
+
+P1018.0	
+C1116	
+O997	
+V276	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1018.0' was found, (0, 7)
+P
+'C1116' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1116.0),TIME(426)
+'O997' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(997.0),TIME(426)
+'V276' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(276.0),TIME(426)
+T24.3	
+H60.5	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(426)
+'H60.5' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.5),TIME(426)
+
+
+
+
+
+P1017.9	
+C1116	
+O999	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1116' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1116.0),TIME(432)
+'O999' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(999.0),TIME(432)
+'V277' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(432)
+T24.3	
+H60.8	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(432)
+'H60.8' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.8),TIME(432)
+
+
+
+
+
+P1017.9	
+C1115	
+O997	
+V276	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1115' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1115.0),TIME(438)
+'O997' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(997.0),TIME(438)
+'V276' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(276.0),TIME(438)
+T24.3	
+H60.9	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(438)
+'H60.9' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.9),TIME(438)
+
+
+
+
+
+P1017.9	
+C1113	
+O993	
+V275	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1113' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1113.0),TIME(444)
+'O993' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(993.0),TIME(444)
+'V275' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(275.0),TIME(444)
+T24.3	
+H61.0	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(444)
+'H61.0' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.0),TIME(444)
+
+
+
+T24.2	
+H61.1	
+
+'T24.2' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.2),TIME(447)
+'H61.1' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.1),TIME(447)
+
+D8.1	
+
+
+P1017.9	
+C1110	
+O-32768	
+V-32768	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1110' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1110.0),TIME(450)
+T24.2	
+H61.3	
+
+'T24.2' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.2),TIME(450)
+'H61.3' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.3),TIME(450)
+
+
+
+T24.3	
+H61.3	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(453)
+'H61.3' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.3),TIME(453)
+
+
+P1017.9	
+C1106	
+O995	
+V276	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1106' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1106.0),TIME(456)
+'O995' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(995.0),TIME(456)
+'V276' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(276.0),TIME(456)
+T24.3	
+H61.1	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(456)
+'H61.1' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(61.1),TIME(456)
+
+
+
+
+
+D4.2	
+
+P1017.9	
+C1097	
+O997	
+V276	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1097' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1097.0),TIME(462)
+'O997' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(997.0),TIME(462)
+'V276' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(276.0),TIME(462)
+T24.3	
+H60.9	
+
+'T24.3' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.3),TIME(462)
+'H60.9' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.9),TIME(462)
+
+
+
+
+
+P1017.9	
+C1092	
+O999	
+V277	
+
+Pressure value <= critera
+Start to collect sensor data.
+'P1017.9' was found, (0, 7)
+P
+'C1092' was found, (10, 15)
+C
+COLLECTION<==TYPE(C),VALUE(1092.0),TIME(468)
+'O999' was found, (18, 22)
+O
+COLLECTION<==TYPE(O),VALUE(999.0),TIME(468)
+'V277' was found, (25, 29)
+V
+COLLECTION<==TYPE(V),VALUE(277.0),TIME(468)
+T24.4	
+H60.7	
+
+'T24.4' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.4),TIME(468)
+'H60.7' was found, (8, 13)
+H
+COLLECTION<==TYPE(H),VALUE(60.7),TIME(468)
+
+
+
+T24.7	
+H60.5	
+
+'T24.7' was found, (0, 5)
+T
+COLLECTION<==TYPE(T),VALUE(24.7),TIME(471)
+'H60.5' was found, (8, 13)
+H
+COLL
