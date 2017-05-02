@@ -17,7 +17,8 @@ OUTPUT
 2. Sensor compensation value, each sensor for each device has different value. 
 3. Graph to show sensor curve.
 '''
-device_list = []
+devlist = []
+device_size = 0
 df = []
 delta_table = []
 SUPPORT_SENSOR_TYPE = ['P', 'T', 'H', 'D', 'V', 'C']
@@ -54,20 +55,29 @@ def read_sn_from_file() :
     return  dev
 
 def load_data_from_file( device, category ) :
-    dataframe = []
+    df_out = None
     for devname in device :
         name = str(devname) + '.' + str(category) + '.csv'
+#	print name
 	try:
-	    dataframe.append( pd.DataFrame(pd.read_csv( name ,header=-1, names=['Value','Time'])) )
+	    if( df_out is None ) :
+		df_out = pd.read_csv( name ,header=-1, names=['Value','Time'] )
+		df_out.insert( 0, 'Device', devname)
+	    else :
+		df_in = pd.read_csv( name ,header=-1, names=['Value','Time'] )
+		df_in.insert( 0, 'Device', devname)
+#		df_out[:len(df_out.index)].append( df_in[1:30] )
+		df_out = pd.concat( [df_out, df_in], axis=0 , ignore_index=True )
 	except:
 	    print "Oops! File doesn't exist"
 	    break
-
-    return dataframe
+#    print df_out
+#    df_out.to_csv('pd.csv', float_format='%.2f', na_rep="NAN!")
+    return df_out
 
 def write_data_to_file( sensor, delta ) :
-	for devname in device_list:
-	    index = device_list.index( devname )
+	for devname in devlist:
+	    index = devlist.index( devname )
 	    print index
 	    print delta[index]
 	    filename = str(devname) + '.delta' 
@@ -77,26 +87,75 @@ def write_data_to_file( sensor, delta ) :
 	print 'write_data_to_file'
 
 def calculate_pressure( df ) :
-    delta = []
+    # Get the min value of pressure
+	print 123
+	return None
 
-    for i in range(0, len(df)):
-	delta.append( df[i]['Value'].min() )
+def calculate( df ) :
+	MIN = df['Value'].min() 
+#	dfs = df.sort_values(['Value'])
+#	print dfs
+#	print devname
+#	print df.loc[ devname ]
+	df_min = df[ df['Value'] == MIN]
+#	print df_min.values[:,2]
+#	for value in df_min.values[:,2] :
+#	    print df_min.values[0][value]
+	print df_min.values[len(df_min)/2-1][1]
+#	df_gold = df_min.at[len(df_min)/2 - 1, 'Time']
+	a = df.values
+	b = np.sort( a, axis=0 )
+	
+#	print b[:,1].tolist().index( MIN )
+#	print b[:,2].tolist()
+#	print b
+#	b = np.split( a, 3, axis=0 )
+	
+#	print df_min['Time'].median()
+
+#	for devname in devlist:
+#	    print df_min[df_min['Device'] == devname]
+#	    print len(df_min[df_min['Device'] == devname].index)
+	# Get data frame from min value of pressure
+#    df2 = df[df['Device'] == devname]
+
+
+
+    # Find median time
+#    MED = df_min['Time'].median() 
+#    print df[df['Value'] == MIN & df['Time'] == MED]
+#    df2.to_csv('123.csv')
+#    print out['min']
     
-    print min(delta)
-    delta = delta - min(delta)
-    print delta
-    return delta
+#    print MED
+#    print df_min
+#    print df.dtypes
+#print df[0][df[0]['Value']==min1].index
+#    print df
+#    print df['Value' == MIN]
+#    for i in range(0, len(df)):
+#	delta.append( df['Value'].min() )
+#    
+#    print min(delta)
+#    delta = delta - min(delta)
+#    print delta
+#min_value_size = len(df[df[0]['Value']==min1].index)
+	return None
 
 def calculate_temp( df ) :
-	delta = []
+	calculate(df)
 	print 'calculate_temp'
 def calculate_humidility( df ) :
+	calculate(df)
 	print 'calculate_humidility'
 def calculate_co2( df ) :
+	calculate(df)
 	print 'calculate_co2'
 def calculate_tvoc( df ) :
+	calculate(df)
 	print 'calculate_tvoc'
 def calculate_dust( df ) :
+	calculate(df)
 	print 'calculate_dust'
 
 
@@ -114,15 +173,16 @@ sensor_compensation = { 'P' : calculate_pressure,
 ======MAIN FUNCTION======
 '''
 
-device_list = read_sn_from_file()
+devlist = read_sn_from_file()
+devsize = len(devlist)
 
 for item in args.category[0] :
     print item
-    df = load_data_from_file( device_list, item )
+    df = load_data_from_file( devlist, item )
     delta_table = sensor_compensation[item]( df )
 
-    if( delta_table is not None ):
-	write_data_to_file( item, delta_table )
+#    if( delta_table is not None ):
+#	write_data_to_file( item, delta_table )
 
 
 #
@@ -160,13 +220,4 @@ for item in args.category[0] :
 #test2 = df2.set_index('Time')
 #test2.plot()
 #plt.show()
-
-#parser.add_argument('integers', metavar='N', type=int, nargs='+',
-#                    help='an integer for the accumulator')
-#parser.add_argument('--sum', dest='accumulate', action='store_const',
-#                    const=sum, default=max,
-#                    help='sum the integers (default: find the max)')
-
-#parser.add_argument(dest='path', metavar='path')
-
 
