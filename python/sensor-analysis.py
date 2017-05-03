@@ -21,12 +21,12 @@ devlist = []
 device_size = 0
 df = []
 delta_table = []
-SUPPORT_SENSOR_TYPE = ['P', 'T', 'H', 'D', 'V', 'C']
+SENSORS = {'P': 'press_k', 'T':'temp_k', 'H':'humi_k', 'D':'dust_k', 'V':'tvoc_k', 'C':'co2_k', 'L':'light_k'}
 
 #version number
 parser = ar.ArgumentParser(description='IPCS sensor collection tools, version=0.1')
 parser.add_argument('-s', dest='category', action='append', nargs='+',
-                    choices=SUPPORT_SENSOR_TYPE, required=True,
+                    choices=SENSORS.keys(), required=True,
                     help='select sensor category')
 parser.add_argument('-o', dest='file', action='store', nargs=1,
                     help='file to describe device serial number to be tested')
@@ -55,108 +55,134 @@ def read_sn_from_file() :
     return  dev
 
 def load_data_from_file( device, category ) :
-    df_out = None
+    df = []
     for devname in device :
         name = str(devname) + '.' + str(category) + '.csv'
 #	print name
 	try:
-	    if( df_out is None ) :
-		df_out = pd.read_csv( name ,header=-1, names=['Value','Time'] )
-		df_out.insert( 0, 'Device', devname)
-	    else :
-		df_in = pd.read_csv( name ,header=-1, names=['Value','Time'] )
-		df_in.insert( 0, 'Device', devname)
-#		df_out[:len(df_out.index)].append( df_in[1:30] )
-		df_out = pd.concat( [df_out, df_in], axis=0 , ignore_index=True )
+	    df.append( pd.DataFrame(pd.read_csv( name ,header=-1, names=['Value','Time'])) )
 	except:
 	    print "Oops! File doesn't exist"
 	    break
-#    print df_out
-#    df_out.to_csv('pd.csv', float_format='%.2f', na_rep="NAN!")
-    return df_out
+#    print df
+#    df.to_csv('pd.csv', float_format='%.2f', na_rep="NAN!")
+    return df
 
 def write_data_to_file( sensor, delta ) :
-	for devname in devlist:
-	    index = devlist.index( devname )
-	    print index
-	    print delta[index]
-	    filename = str(devname) + '.delta' 
-	    fd = open( filename, 'w')
-	    fd.write( str(sensor) + ":" + str(delta[index]) + ",\n" )
-	    fd.close()
-	print 'write_data_to_file'
+    print delta
+    for devname in devlist:
+	filename = str(devname) + '.def' 
+	fd = open( filename, 'a')
+	index = devlist.index( devname )
+	fd.write( SENSORS[sensor] + ":" + str(delta[index]) + "\n" )
+	fd.close()
+    print 'write_data_to_file'
+
+def find_peak_low( df, rdigit ) :
+    MIN = 1000000
+    delta = []
+
+    for devdf in df :
+	val = devdf['Value'].min()
+	idx = devdf['Value'].idxmin()
+#	print val,idx
+
+	if( val < MIN ) :
+	    MIN = val
+	    MIN_IDX = idx + 1
+	    MIN_TIME = devdf.ix[idx,['Time']].values[0]
+
+#    print MIN,MIN_IDX, MIN_TIME
+
+#    print MIN
+    for devdf in df :
+	Min = devdf['Time'] <= MIN_TIME
+	Max = devdf['Time'] >= MIN_TIME
+	idx_Min = devdf.ix[Min, 'Time'].idxmax()
+	idx_Max = devdf.ix[Max, 'Time'].idxmin()
+	df_out = devdf.ix[idx_Min:idx_Max, ['Value']]
+	df_out = (df_out - MIN)
+	df_out = df_out.mean()
+	delta.append(df_out.values[0])
+#	print delta
+	
+    delta = [ round(val, rdigit) for val in delta ]
+
+    if( rdigit is 0 ) :
+	delta[:] = [int(a) for a in delta]
+    return delta
+
+def find_peak_high( df, rdigit ) :
+    MAX = 0
+    delta = []
+
+    for devdf in df :
+	val = devdf['Value'].max()
+	idx = devdf['Value'].idxmax()
+#	print val,idx
+
+	if( val > MAX ) :
+	    MAX = val
+	    MAX_IDX = idx + 1
+	    MAX_TIME = devdf.ix[idx,['Time']].values[0]
+
+    print MAX,MAX_IDX, MAX_TIME
+
+#    print MAX
+    for devdf in df :
+	Min = devdf['Time'] <= MAX_TIME
+	Max = devdf['Time'] >= MAX_TIME
+#	print Min
+#	print Max
+	idx_Min = devdf.ix[Min, 'Time'].idxmax()
+	idx_Max = devdf.ix[Max, 'Time'].idxmin()
+	print 'idx_Min','idx_Max',idx_Min,idx_Max
+	df_out = devdf.ix[idx_Min:idx_Max, ['Value']]
+	df_out = (df_out - MAX) 
+	df_out = df_out.mean()
+	delta.append(df_out.values[0])
+	
+	delta = [ round(val, rdigit) for val in delta ]
+#    print delta
+
+	if( rdigit is 0 ) :
+	    delta[:] = [int(a) for a in delta]
+    return delta
 
 def calculate_pressure( df ) :
-    # Get the min value of pressure
-	print 123
-	return None
+    delta = []
 
-def calculate( df ) :
-	MIN = df['Value'].min() 
-#	dfs = df.sort_values(['Value'])
-#	print dfs
-#	print devname
-#	print df.loc[ devname ]
-	df_min = df[ df['Value'] == MIN]
-#	print df_min.values[:,2]
-#	for value in df_min.values[:,2] :
-#	    print df_min.values[0][value]
-	print df_min.values[len(df_min)/2-1][1]
-#	df_gold = df_min.at[len(df_min)/2 - 1, 'Time']
-	a = df.values
-	b = np.sort( a, axis=0 )
-	
-#	print b[:,1].tolist().index( MIN )
-#	print b[:,2].tolist()
-#	print b
-#	b = np.split( a, 3, axis=0 )
-	
-#	print df_min['Time'].median()
-
-#	for devname in devlist:
-#	    print df_min[df_min['Device'] == devname]
-#	    print len(df_min[df_min['Device'] == devname].index)
-	# Get data frame from min value of pressure
-#    df2 = df[df['Device'] == devname]
-
-
-
-    # Find median time
-#    MED = df_min['Time'].median() 
-#    print df[df['Value'] == MIN & df['Time'] == MED]
-#    df2.to_csv('123.csv')
-#    print out['min']
+    for i in range(0, len(df)):
+	delta.append( df[i]['Value'].min() )
     
-#    print MED
-#    print df_min
-#    print df.dtypes
-#print df[0][df[0]['Value']==min1].index
-#    print df
-#    print df['Value' == MIN]
-#    for i in range(0, len(df)):
-#	delta.append( df['Value'].min() )
-#    
-#    print min(delta)
-#    delta = delta - min(delta)
-#    print delta
-#min_value_size = len(df[df[0]['Value']==min1].index)
-	return None
+    print min(delta)
+    delta = delta - min(delta)
+    return delta
 
 def calculate_temp( df ) :
-	calculate(df)
-	print 'calculate_temp'
+    delta = find_peak_low(df,2)
+    print 'calculate_temp'
+    return delta
 def calculate_humidility( df ) :
-	calculate(df)
-	print 'calculate_humidility'
+    delta = find_peak_high(df,1)
+    print 'calculate_humidility'
+    return delta
 def calculate_co2( df ) :
-	calculate(df)
-	print 'calculate_co2'
+    delta = find_peak_high(df,0)
+    print 'calculate_co2'
+    return delta
 def calculate_tvoc( df ) :
-	calculate(df)
-	print 'calculate_tvoc'
+    delta = find_peak_low(df,0)
+    print 'calculate_tvoc'
+    return delta
 def calculate_dust( df ) :
-	calculate(df)
-	print 'calculate_dust'
+    delta = find_peak_high(df,2)
+    print 'calculate_dust'
+    return delta
+def calculate_light( df ) :
+    delta = find_peak_high(df,0)
+    print 'calculate_dust'
+    return delta
 
 
 
@@ -166,6 +192,7 @@ sensor_compensation = { 'P' : calculate_pressure,
 			'D' : calculate_dust,
 			'V' : calculate_tvoc,
 			'C' : calculate_co2,
+			'L' : calculate_light,
 }
 
 
@@ -176,42 +203,20 @@ sensor_compensation = { 'P' : calculate_pressure,
 devlist = read_sn_from_file()
 devsize = len(devlist)
 
+for devname in devlist:
+    filename = str(devname) + '.def' 
+    index = devlist.index( devname )
+    if( os.path.isfile(filename) ) :
+	os.remove(filename)
+
 for item in args.category[0] :
     print item
     df = load_data_from_file( devlist, item )
     delta_table = sensor_compensation[item]( df )
+    print delta_table
+    if( delta_table is not None ):
+	write_data_to_file( item, delta_table )
 
-#    if( delta_table is not None ):
-#	write_data_to_file( item, delta_table )
-
-
-#
-#devnames = [   devname+'.p.csv', devname+'.t.csv', devname+'.h.csv',
-#	       devname+'.d.csv', devname+'.v.csv', devname+'.c.csv']
-#for devname in devnames
-#    devname = devfd.readline().strip()
-#    df = [ pd.DataFrame(pd.read_csv( devname ,header=-1, names=['Value','Time'])) for devname in devnames ]
-
-#print df
-#df=pd.DataFrame(pd.read_csv('1646I3000071.t.csv',header=-1, names=['Value','Time']))
-#df2=pd.DataFrame(pd.read_csv('1646I3000072.t.csv',header=-1, names=['Value','Time']))
-#print df.shape
-
-#print df[0].columns
-#print df[1].describe()
-#print df2.describe()
-#print df.head(3)
-#print df.dtypes
-
-#print df.max()
-
-#min1 = df[0]['Value'].min()
-#print df[0][df[0]['Value']==min1].index
-##print df2[df2['Value']==min2].index
-
-
-#min_value_size = len(df[0][df[0]['Value']==min1].index)
-#print min_value_size
 
 #Plot data curve
 #test = df[0].set_index('Time')
