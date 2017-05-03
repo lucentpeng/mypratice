@@ -1,0 +1,6 @@
+press_k:0.1
+temp_k:0.5
+dust_k:0.0
+tvoc_k:7
+co2_k:0
+humi_k:-0.9
