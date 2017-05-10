@@ -27,6 +27,11 @@ parser.add_argument('-c', dest='critera', action='store', nargs=1,
 
 args = parser.parse_args()
 
+#Set working directory
+current_dir =  os.getcwd()
+os.chdir( str(os.getcwd()) + "/factory" )
+print 'Current Working Path is '+ str(os.getcwd())
+
 """=====Input Variable Start======
 If test mode is on, use hard code input
 In the other side, use argv input"""
