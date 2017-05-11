@@ -85,26 +85,35 @@ def find_peak_low( df, rdigit ) :
     for devdf in df :
 	val = devdf['Value'].min()
 	idx = devdf['Value'].idxmin()
-#	print val,idx
+	print val,idx
 
 	if( val < MIN ) :
 	    MIN = val
 	    MIN_IDX = idx + 1
 	    MIN_TIME = devdf.ix[idx,['Time']].values[0]
 
-#    print MIN,MIN_IDX, MIN_TIME
+    print MIN,MIN_IDX, MIN_TIME
 
-#    print MIN
     for devdf in df :
 	Min = devdf['Time'] <= MIN_TIME
 	Max = devdf['Time'] >= MIN_TIME
-	idx_Min = devdf.ix[Min, 'Time'].idxmax()
-	idx_Max = devdf.ix[Max, 'Time'].idxmin()
+
+#	print Min
+	if( any(Min)) :
+	    idx_Min = devdf.ix[Min, 'Time'].idxmax()
+	else :
+	    idx_Min = 0
+
+	if( any(Max) ) :
+	    idx_Max = devdf.ix[Max, 'Time'].idxmin()
+	else :
+	    idx_Max = len(Max)
+
+	print idx_Min, idx_Max
 	df_out = devdf.ix[idx_Min:idx_Max, ['Value']]
 	df_out = (df_out - MIN)
 	df_out = df_out.mean()
 	delta.append(df_out.values[0])
-#	print delta
 	
     delta = [ round(val, rdigit) for val in delta ]
 
@@ -128,20 +137,26 @@ def find_peak_high( df, rdigit ) :
 
     print MAX,MAX_IDX, MAX_TIME
 
-#    print MAX
     for devdf in df :
 	Min = devdf['Time'] <= MAX_TIME
 	Max = devdf['Time'] >= MAX_TIME
 #	print Min
-#	print Max
-	idx_Min = devdf.ix[Min, 'Time'].idxmax()
-	idx_Max = devdf.ix[Max, 'Time'].idxmin()
+	if( any(Min)) :
+	    idx_Min = devdf.ix[Min, 'Time'].idxmax()
+	else :
+	    idx_Min = 0
+
+	if( any(Max) ) :
+	    idx_Max = devdf.ix[Max, 'Time'].idxmin()
+	else :
+	    idx_Max = len(Max)
+
 	print 'idx_Min','idx_Max',idx_Min,idx_Max
 	df_out = devdf.ix[idx_Min:idx_Max, ['Value']]
 	df_out = (df_out - MAX) 
 	df_out = df_out.mean()
 	delta.append(df_out.values[0])
-	
+
 	delta = [ round(val, rdigit) for val in delta ]
 #    print delta
 
@@ -184,6 +199,14 @@ def calculate_light( df ) :
     print 'calculate_dust'
     return delta
 
+def verify_sensor( stype, df ) :
+    val = []
+    for devdf in df :
+	val.append( devdf['Value'].max() )
+
+#    if( stype is "L" ) :
+##    else if( stype is "D" ) :
+ #   else #P, T, H , D , V, L
 
 
 sensor_compensation = { 'P' : calculate_pressure,

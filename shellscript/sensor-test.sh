@@ -2,7 +2,7 @@
 
 file="ip"
 path=/home/ubuntu/factory/
-execute_time=20
+execute_time=120
 to_test="P T H C D V L"
 
 #IP list must need exist, we will
@@ -45,7 +45,7 @@ do
     printf 'Stop sensor collection %s\n' "$dev"
     ssh -n ubuntu@$ip rm $path/run
     printf 'Copy data from device %s\n' "$dev"
-    scp ubuntu@$ip:~/factory/*.csv data/
+    scp ubuntu@$ip:$ip*.csv data/
 done <"$file"
 
 #Run sensor analysis function to calculate delta value

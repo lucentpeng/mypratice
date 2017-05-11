@@ -44,7 +44,7 @@ mutex = Lock()	    #Mutex to control collect flag
 
 #Output Data Pattern
 Ppat = re.compile('^P[0-9]+\.[0-9]')
-Apat = re.compile('[PCVTHD][0-9.]+')
+Apat = re.compile('[PCVTHD][\-0-9.]+')
 
 
 num = [ 'P', 'T', 'H', 'D', 'V', 'C', 'L']
