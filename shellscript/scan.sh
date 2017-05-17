@@ -1,2 +1,2 @@
 #!/bin/bash
-nmap -sP 172.16.78.* | grep "Nmap scan report" | awk {'print $5'} > ip
+nmap -sP 192.168.0.* | grep "Nmap scan report" | awk {'print $5'} > ip

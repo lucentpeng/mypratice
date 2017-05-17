@@ -2,7 +2,7 @@
 
 file="ip"
 path=/home/ubuntu/factory
-execute_time=120
+execute_time=185
 to_test="P T H C D V L"
 
 #IP list must need exist, we will
