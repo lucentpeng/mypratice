@@ -17,7 +17,10 @@ OUTPUT
 2. Sensor compensation value, each sensor for each device has different value. 
 3. Graph to show sensor curve.
 '''
+#All devices need to calibrate
 devlist = []
+#Some devices with abnormal data
+devlist_ng = []
 device_size = 0
 df = []
 delta_table = []
@@ -56,15 +59,31 @@ def read_sn_from_file() :
 
 def load_data_from_file( device, category ) :
     df = []
+    i = 0
     for devname in device :
         name = str(devname) + '.' + str(category) + '.csv'
-#	print name
+	print name
 	try:
-	    df.append( pd.DataFrame(pd.read_csv( name ,header=-1, names=['Value','Time'])) )
+	    onedf = pd.read_csv( name ,header=-1, names=['Value','Time'])
+	    if( onedf['Value'].min() == -32768 ) : # Most of sensor will report -32768
+		print "THP--NG-"
+		devlist_ng.append( devname )
+	    elif( category is 'D' and onedf.min() == 0  ) : #Dust error will report 0
+		print "D--NG--"
+		devlist_ng.append( devname )
+	    elif( category is 'L' and onedf.std() < 40 ) : # Light sensor doesn't have error value, we need to verify lux value variant
+		print "L--NG--"
+		devlist_ng.append( devname )
+	    else :
+		print "OK----"
+		print type(onedf)
+		df.append( onedf )
+	    i = i + 1
 	except:
 	    print "Oops! File doesn't exist"
 	    break
-#    print df
+    for bad in devlist_ng :
+	devlist.remove( bad )
 #    df.to_csv('pd.csv', float_format='%.2f', na_rep="NAN!")
     return df
 
@@ -128,7 +147,7 @@ def find_peak_high( df, rdigit ) :
     for devdf in df :
 	val = devdf['Value'].max()
 	idx = devdf['Value'].idxmax()
-#	print val,idx
+	print val,idx
 
 	if( val > MAX ) :
 	    MAX = val
@@ -226,6 +245,7 @@ sensor_compensation = { 'P' : calculate_pressure,
 devlist = read_sn_from_file()
 devsize = len(devlist)
 
+#Remove old calibration data
 for devname in devlist:
     filename = str(devname) + '.def' 
     index = devlist.index( devname )
@@ -234,18 +254,27 @@ for devname in devlist:
 
 for item in args.category[0] :
     print item
+    #Load data by each sensors and we will check any abnormal sensor data found
+    #If some problem found , put this device into NG list. Remove from normal device list.
     df = load_data_from_file( devlist, item )
+
+    #Do data analysis, to calculate delta value
     delta_table = sensor_compensation[item]( df )
     print delta_table
+    #Generate calibration files for each device
     if( delta_table is not None ):
 	write_data_to_file( item, delta_table )
 
+if( len( devlist_ng ) != 0 ) :
+    print "BAD Device found!!",devlist_ng
+else :
+    print "All devices are good!!"
 
 #Plot data curve
 #test = df[0].set_index('Time')
 #test.plot()
 
-#test2 = df2.set_index('Time')
+#test2 = df[0].set_index('Time')
 #test2.plot()
 #plt.show()
 
