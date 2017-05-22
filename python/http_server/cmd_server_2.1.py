@@ -15,13 +15,12 @@ import time
 import commands, subprocess, os
 
 post_values = None
-cmd = None
-CWD = None
+cmd_shell = None
 IDIP = None
 pt = None
 dataname = None
 
-#HOST_NAME = getip('eth0')#linux
+#HOST_NAME = getip('wlp3s0')#linux
 #HOST_NAME = '10.100.182.210' #win7
 PORT_NUMBER = 9803
 
@@ -33,41 +32,12 @@ class TodoHandler(BaseHTTPRequestHandler):
 
 
     def do_GET(self):
-	    global cmd, CWD, pt, dataname
+	    global cmd_shell, pt, dataname
 	    message = json.dumps(post_values)
-	    msg = json.dumps(self.dt)
 
-	    if self.path.endswith("/command"):
-		    self.send_response(200)
-		    self.send_header('Content-type', 'text/html')
-		    self.end_headers()
-
-		    CWD = re.search('\"reserved0\": \"(.*?)\"', message)
-		    cmd = re.search('\"reserved1\": \"(.*?)\"', message)
-
-		    pt = re.search('\"reserved2\": \"(.*?)\"', message)
-		    upd = re.search('\"reserved3\": \"(.*?)\"', message)
-		    dow = re.search('\"reserved4\": \"(.*?)\"', message)
-		    dataname = re.search('\"reserved5\": \"(.*?)\"', message)
-		    statu = re.search('\"reserved6\": \"(.*?)\"', message)
-		    print statu
-		    if statu.group(1) == '1':
-			    thread.start_new_thread(receive,())
-
-		    elif statu.group(1) == '2':
-			    thread.start_new_thread(send,())
-
-		    elif CWD.group(1) == 'kill':
-			    IDIP.kill()
-			    self.wfile.write("Close")
-		    else:
-			    thread.start_new_thread(start,())
-			    time.sleep(0.1)
-			    stdoutput,erroutput=IDIP.communicate(input=None)
-			    red = str(stdoutput)
-			    err = str(erroutput)
-			    self.wfile.write(red)
-			    self.wfile.write(err)
+		self.send_response(200)
+		self.send_header('Content-type', 'text/html')
+		self.end_headers()
 
 
     def do_POST(self):
@@ -87,19 +57,46 @@ class TodoHandler(BaseHTTPRequestHandler):
 	    self.send_response(200,'test')
 	    self.send_header('Content-type', 'application/json')
 	    self.end_headers()
+
+	    message = json.dumps(post_values)
 	    self.wfile.write(post_values)
 	    print "Receive: %s\n"%json.dumps(post_values, indent = 1)
+		cmd_shell = re.search('\"CMD_INPUT\": \"(.*?)\"', message)
+
+		pt = re.search('\"reserved2\": \"(.*?)\"', message)
+		upd = re.search('\"reserved3\": \"(.*?)\"', message)
+		dow = re.search('\"reserved4\": \"(.*?)\"', message)
+		dataname = re.search('\"reserved5\": \"(.*?)\"', message)
+		flag = re.search('\"CMD_FLAG\": \"(.*?)\"', message)
+		print flag
+        # Flag = 1 Receive data from client
+		if flag.group(1) == '1':
+			thread.start_new_thread(receive,())
+
+        # Flag=2 Send data to client
+		elif flag.group(1) == '2':
+			thread.start_new_thread(send,())
+
+        # Flag = 0 Execute shell command by Popen
+		else:
+			thread.start_new_thread(start,())
+			time.sleep(0.1)
+			stdoutput,erroutput=IDIP.communicate(input=None)
+			red = str(stdoutput)
+			err = str(erroutput)
+			self.wfile.write(red)
+			self.wfile.write(err)
 
 def start( ):
     global IDIP
-    IDIP = subprocess.Popen(cmd.group(1), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE, cwd=CWD.group(1))
+    IDIP = subprocess.Popen(cmd_shell.group(1), shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 
 def getip(ethname):
     s=socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
     return socket.inet_ntoa(fcntl.ioctl(s.fileno(), 0X8915, struct.pack('256s', ethname[:15]))[20:24])
 
 def receive():
-    address = (getip('eth0'), 9700)
+    address = (getip('wlp3s0'), 9700)
     message = json.dumps(post_values)
     socket01 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     socket01.bind(address)
@@ -121,7 +118,7 @@ def receive():
     print('server close')
 
 def send():
-    address = (getip('eth0'), 9700)
+    address = (getip('wlp3s0'), 9700)
     message = json.dumps(post_values)
     socket01 = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     socket01.bind(address)
@@ -146,6 +143,6 @@ def send():
 
 if __name__ == '__main__':
     from BaseHTTPServer import HTTPServer
-    server = HTTPServer((getip('eth0'), PORT_NUMBER), TodoHandler)
+    server = HTTPServer((getip('wlp3s0'), PORT_NUMBER), TodoHandler)
     print("Starting server, use <Ctrl-C> to stop")
     thread.start_new_thread(server.serve_forever(),)

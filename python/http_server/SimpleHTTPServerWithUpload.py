@@ -46,7 +46,6 @@ class SimpleHTTPRequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
     def do_GET(self):
         """Serve a GET request."""
         f = self.send_head()
-	print "fffff", f
         if f:
             self.copyfile(f, self.wfile)
             f.close()
@@ -58,6 +57,7 @@ class SimpleHTTPRequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             f.close()
 
     def do_POST(self):
+        print self
         """Serve a POST request."""
         r, info = self.deal_post_data()
         print r, info, "by: ", self.client_address
@@ -86,6 +86,7 @@ class SimpleHTTPRequestHandler(BaseHTTPServer.BaseHTTPRequestHandler):
             f.close()
 
     def deal_post_data(self):
+        print self
         boundary = self.headers.plisttext.split("=")[1]
         remainbytes = int(self.headers['content-length'])
         line = self.rfile.readline()
