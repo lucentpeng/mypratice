@@ -1,68 +1,52 @@
 #!/bin/bash
+. ./00_Env.sh
 
-file="ip"
-path=/home/ubuntu/factory
-execute_time=185
-to_test="P T H C D V L"
-
-#IP list must need exist, we will
-[ ! -f "ip" ] && echo "Need IP list" && exit 0
-
-#Create data folder, data folder is working dir
-if [ ! -d "./data" ]; then
-    mkdir data
-else
-    [ -f "./data/DEVICELIST.txt" ] && rm "./data/DEVICELIST.txt"
-fi
-
-#Check "run" file exist or not, create it if file not exist
 #Run sensor collection funtion
-while read ip; do
-    echo $ip
-    ssh -n ubuntu@$ip touch $path/run
-done < ip
-
-while read -r line
+while read -r item
 do
-        # display $line or do somthing with $line
-    ip=$line
+    device=$(echo $item | awk -F ',' '{print $1}')
+    ip=$(echo $item | awk -F ',' '{print $2}')
+
+    printf 'Create run file'
+    ssh -n ubuntu@$ip "touch $DEV_DEST/RUN"
     printf 'Execute sensor collection device ip is %s\n' "$ip"
-    ssh -n ubuntu@$ip $path/sensor-collection.py -t 0 -c 1200 & >/dev/null 2>&1
-done <"$file"
+    ssh -n ubuntu@$ip $DEV_DEST/sensor-collection.py -t 0 -c 1200 & >/dev/null 2>&1
+done <"$DATA/DEVICELIST_from_lan.txt"
 
 #After few minutes after , stop it
 #Get collection data from devices
-sleep $execute_time
+sleep $SENSOR_TEST_PERIOD
 
-while read -r line
+while read -r item
 do
-        # display $line or do somthing with $line
-    printf 'Device IP is %s\n' "$line"
-    ip=$line
+    ip=$(echo $item | awk -F ',' '{print $2}')
     dev="$(ssh -n ubuntu@$ip hostname)"
     printf 'Device Hostname is %s\n' "$dev"
-    echo "$dev" >> ./data/DEVICELIST.txt
     printf 'Stop sensor collection %s\n' "$dev"
-    ssh -n ubuntu@$ip rm $path/run
+    ssh -n ubuntu@$ip "rm $DEV_DEST/RUN"
     printf 'Copy data from device %s\n' "$dev"
-    scp ubuntu@$ip:$path/*.csv data/
-done <"$file"
+    scp ubuntu@$ip:$DEV_DEST/*.csv $DATA/
+done <"$DATA/DEVICELIST_from_lan.txt"
 
 #Run sensor analysis function to calculate delta value
-../python/sensor-analysis.py -s $to_test -o DEVICELIST.txt
+while read -r item
+do
+    ip=$(echo $item | awk -F ',' '{print $2}')
+    device=$(echo $item | awk -F ',' '{print $1}')
+    echo $device >> /tmp/list.txt
+done <"$DATA/DEVICELIST_from_lan.txt"
+
+$HOST_SRC/sensor-analysis.py -s $SENSOR -o /tmp/list.txt
 
 #Push back to each device
-while read -r line
+while read -r item
 do
-    printf '%s\n' "$line"
-    ip=$line
+    item=$(echo $item | awk -F ',' '{print $2}')
     dev="$(ssh -n ubuntu@$ip hostname)"
-#    scp data/$dev.def ubuntu@$ip:/opt/ironman/Calibration.def
-    scp data/$dev.def ubuntu@$ip:$path/Calibration.def
-#    ssh -n ubuntu@$ip sudo su;cp $path/Calibration.def $path/Calibration.def
-done <"$file"
-#
+    scp $DATA/$dev.def ubuntu@$ip:~/Calibration.def
+done <"$DATA/DEVICELIST_from_lan.txt"
 
+rm /tmp/list.txt
 #var="$(ssh ubuntu@$ip test -e /home/ubuntu/run && echo "Exist" || echo "Not exist")"
 #
 #if [ "$var"=="Exist" ]; then

@@ -3,7 +3,7 @@
 file="ip"
 path=/home/ubuntu/factory
 execute_time=185
-to_test="P T H C D V L"
+to_test="T H C V P D L"
 
 #IP list must need exist, we will
 [ ! -f "ip" ] && echo "Need IP list" && exit 0
